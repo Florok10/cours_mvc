@@ -1,5 +1,7 @@
 <?php
 
+require ('pdo.php');
+
 if (isset( $_POST['submit'] ) ) {
   $nom = $_POST['nom']; 
   $prenom = $_POST['prenom'];
@@ -8,17 +10,13 @@ if (isset( $_POST['submit'] ) ) {
   $passwordUser = $_POST['passwordUser'];
 }
 
-
-
 try {
-  $bdd = new PDO('mysql:host=localhost;dbname=mvc;charset=utf8', ' ', 'root');
-  $preparation_requete = $bdd->prepare("INSERT INTO user (nom, prenom, age, email, passwordUser)
+  // $bdd = new PDO('mysql:host=localhost;port=80;dbname=mvc;charset=UTF8', '', 'root');
+  $preparation_requete = $dsn->prepare("INSERT INTO user (nom, prenom, age, email, passwordUser)
    VALUES (:nom, :prenom, :age, :email, :passwordUser)");
 }
-  catch (Exception $e)
-  {
+  catch (Exception $e) {
     die('Erreur : ' . $e->getMessage())
-    $getMessage = echo <p>Une erreur est survenue</p>;
   }
 
   $preparation_requete -> bindParam(':nom', $nom);
@@ -28,6 +26,4 @@ try {
   $preparation_requete -> bindParam(':passwordUser', $passwordUser);
 
   $preparation_requete -> execute();
-
-if("submit") { echo 'Nous avons bien reçu votre formluaire'; 
 ?>

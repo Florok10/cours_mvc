@@ -1,11 +1,11 @@
 <?php
 
 $host = "localhost";
-$port = "3306";
+$port = "80";
 $dbname = "mvc";
 $charset = "UTF8";
-$user = "";
-$password = "";
+$user = "Valentin";
+$password = "root";
 
 $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=$charset";
 ?>

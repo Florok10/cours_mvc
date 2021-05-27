@@ -11,28 +11,28 @@
 	<body>
 
 
-				<form action="../controller/controller.php" name="form_register" id="form_register" method="post">
+				<form action="controller.php" id="form_register" method="post">
 					<h3>S'inscrire</h3>
 					<div class="col-auto">
-						<input type="text" placeholder="Nom" class="col-sm-2 col-form-label col-form-label-lg" name="nom" for="form_register">
-						<input type="text" placeholder="Prénom" class="col-sm-2 col-form-label col-form-label-lg" name="prenom" for="form_register">
+						<input type="text" placeholder="Nom" class="col-sm-2 col-form-label col-form-label-lg" name="nom">
+						<input type="text" placeholder="Prénom" class="col-sm-2 col-form-label col-form-label-lg" name="prenom">
 					</div>
 					<div class="col-auto">
-						<input type="text" placeholder="Adresse mail" class="col-sm-2 col-form-label col-form-label-lg" name="mail" for="form_register">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+						<input type="text" placeholder="Adresse mail" class="col-sm-3 col-form-label col-form-label-lg" name="email">
+                        <div id="emailHelp" class="form-text">Nous ne divulgerons pas votre adresse email</div>
 					</div>
 					<div class="col-auto">
-						<input type="number" min="1" max="135"  name="age" class="col-sm-1 col-form-label col-form-label" for="form_register">
+						<input type="number" min="1" max="135"  name="age" class="col-sm-1 col-form-label col-form-label">
 					</div>
 					<div class="col-auto">
-						<input type="password" placeholder="Mot de passe" maxlength="25" class="col-sm-2 col-form-label col-form-label-lg" name="password_user" for="form_register">
+						<input type="password" placeholder="Mot de passe" maxlength="25" class="col-sm-2 col-form-label col-form-label-lg" name="passwordUser">
 					</div>
-					<div class="col-auto">
-						<input type="password" placeholder="Confirmer le mot de passe" maxlength="25" class="col-sm-2 col-form-label col-form-label-lg" name="password_user_confirm" for="form_register">
-					</div>
+					<!-- <div class="col-auto">
+						<input type="password" placeholder="Confirmer le mot de passe" maxlength="25" class="col-sm-2 col-form-label col-form-label-lg" name="passwordUserConfirm" for="form_register">
+					</div> -->
 					<div class="col-auto">
                         <label for="cgu_checkbox">Veuillez accepter nos <a href="#">CGU</a></label>
-						<input type="checkbox" class="form-check-input" value="" name="cgu" id="cgu_checkbox" for="form_register" required>
+						<input type="checkbox" class="form-check-input" id="cgu_checkbox" required>
 					</div>
 					<button type="submit" for="form_register" name="submit" class="btn btn-primary">S'enregistrer</a>
 					</button>
