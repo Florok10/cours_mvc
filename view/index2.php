@@ -11,7 +11,7 @@
 	<body>
 
 
-				<form action="controller/pdo.php" name="form_register" id="form_register" method="post">
+				<form action="../controller/controller.php" name="form_register" id="form_register" method="post">
 					<h3>S'inscrire</h3>
 					<div class="col-auto">
 						<input type="text" placeholder="Nom" class="col-sm-2 col-form-label col-form-label-lg" name="nom" for="form_register">
@@ -22,11 +22,8 @@
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 					</div>
 					<div class="col-auto">
-						<input type="number" name="age" class="col-sm-1 col-form-label col-form-label" for="form_register">
+						<input type="number" min="1" max="135"  name="age" class="col-sm-1 col-form-label col-form-label" for="form_register">
 					</div>
-					<!--<div class="col-auto">
-						<input type="file" class="col-sm-2 col-form-label col-form-label-lg" accept=".svg" for="form_register">
-					</div>-->
 					<div class="col-auto">
 						<input type="password" placeholder="Mot de passe" maxlength="25" class="col-sm-2 col-form-label col-form-label-lg" name="password_user" for="form_register">
 					</div>

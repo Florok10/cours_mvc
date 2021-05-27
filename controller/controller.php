@@ -11,9 +11,9 @@ if (isset( $_POST['submit'] ) ) {
 
 
 try {
-  $bdd = new PDO('mysql:host=localhost;dbname=mvc;charset=utf8', 'root', '');
-  $preparation_requete = $bdd->prepare("INSERT INTO user (nom, prenom, mail, date_anniv, photo, password_user, cgu)
-   VALUES (:nom, :prenom, :mail, :photo, :date_anniv, :password_ser, :cgu)");
+  $bdd = new PDO('mysql:host=localhost;dbname=mvc;charset=utf8', '', 'root');
+  $preparation_requete = $bdd->prepare("INSERT INTO user (nom, prenom, age, email, passwordUser)
+   VALUES (:nom, :prenom, :age, :email, :passwordUser)");
 }
   catch (Exception $e)
   {
@@ -22,13 +22,11 @@ try {
 
   $preparation_requete -> bindParam(':nom', $nom);
   $preparation_requete -> bindParam(':prenom', $prenom);
-  $preparation_requete -> bindParam(':mail', $mail);
-  $preparation_requete -> bindParam(':photo', $photo);
-  $preparation_requete -> bindParam(':date_anniv', $date_anniv);
-  $preparation_requete -> bindParam(':password_user', $password_user);
-  $preparation_requete -> bindParam(':cgu', $cgu);
+  $preparation_requete -> bindParam(':age', $age);
+  $preparation_requete -> bindParam(':email', $email);
+  $preparation_requete -> bindParam(':passwordUser', $passwordUser);
 
   $preparation_requete -> execute();
 
-/*if("submit") { echo 'Nous avons bien reçu votre formluaire'; */
+if("submit") { echo 'Nous avons bien reçu votre formluaire'; 
 ?>

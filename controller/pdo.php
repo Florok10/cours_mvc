@@ -2,9 +2,9 @@
 
 $host = "localhost";
 $port = "3306";
-$dbname = "bdd_poo";
+$dbname = "mvc";
 $charset = "UTF8";
-$user = "abdel";
+$user = "";
 $password = "";
 
 $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=$charset";
