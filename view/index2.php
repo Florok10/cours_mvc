@@ -11,7 +11,7 @@
 	<body>
 
 
-				<form action="controller.php" id="form_register" method="post">
+				<form action="../controller/controller.php" id="form_register" method="post">
 					<h3>S'inscrire</h3>
 					<div class="col-auto">
 						<input type="text" placeholder="Nom" class="col-sm-2 col-form-label col-form-label-lg" name="nom">

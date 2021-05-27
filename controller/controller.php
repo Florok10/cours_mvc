@@ -11,7 +11,7 @@ if (isset( $_POST['submit'] ) ) {
 }
 
 try {
-  // $bdd = new PDO('mysql:host=localhost;port=80;dbname=mvc;charset=UTF8', '', 'root');
+  $bdd = new PDO($dsn);
   $preparation_requete = $dsn->prepare("INSERT INTO user (nom, prenom, age, email, passwordUser)
    VALUES (:nom, :prenom, :age, :email, :passwordUser)");
 }
