@@ -1,11 +1,22 @@
 <?php 
 
 class User {
-    public $_nom;
+    private $_nom;
     private $_prenom;
     private $_age;
     private $_email;
+
+    public function __construct($_nom) {
+        echo $_nom . " ";
+    }
 }
 
-$user1 = new User;
-echo $user1->nom;
+$valentin = new User('Valentin');
+$mourad = new User('Mourad');
+$omar = new User('Omar');
+$steven = new User('Steven');
+$dany = new User('Dany');
+$emilie = new User('Emilie');
+$mickael = new User('Mickael');
+$baptiste = new User('Baptiste');
+$marjorie = new User('Marjorie');
