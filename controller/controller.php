@@ -11,13 +11,14 @@ if (isset( $_POST['submit'] ) ) {
 
 
 try {
-  $bdd = new PDO('mysql:host=localhost;dbname=mvc;charset=utf8', '', 'root');
+  $bdd = new PDO('mysql:host=localhost;dbname=mvc;charset=utf8', ' ', 'root');
   $preparation_requete = $bdd->prepare("INSERT INTO user (nom, prenom, age, email, passwordUser)
    VALUES (:nom, :prenom, :age, :email, :passwordUser)");
 }
   catch (Exception $e)
   {
-    die('Erreur : ' . $e->getMessage());
+    die('Erreur : ' . $e->getMessage())
+    $getMessage = echo <p>Une erreur est survenue</p>;
   }
 
   $preparation_requete -> bindParam(':nom', $nom);
